@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/layouts
+# catalog-date 2009-09-02 18:09:14 +0200
+# catalog-license lppl1.3
+# catalog-version 2.6d
 Name:		texlive-layouts
 Version:	2.6d
 Release:	1
@@ -48,6 +54,7 @@ designer to experiment with the layout parameters.
 %doc %{_texmfdistdir}/source/latex/layouts/layman.tex
 %doc %{_texmfdistdir}/source/latex/layouts/layouts.dtx
 %doc %{_texmfdistdir}/source/latex/layouts/layouts.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +65,5 @@ designer to experiment with the layout parameters.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
