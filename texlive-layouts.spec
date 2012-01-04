@@ -6,7 +6,7 @@
 # catalog-version 2.6d
 Name:		texlive-layouts
 Version:	2.6d
-Release:	1
+Release:	2
 Summary:	Display various elements of a document's layout
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/layouts
