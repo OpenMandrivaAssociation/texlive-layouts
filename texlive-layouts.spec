@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/layouts
-# catalog-date 2009-09-02 18:09:14 +0200
-# catalog-license lppl1.3
-# catalog-version 2.6d
 Name:		texlive-layouts
-Version:	2.6d
-Release:	12
+Version:	42428
+Release:	1
 Summary:	Display various elements of a document's layout
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/layouts
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/layouts.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/layouts.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/layouts.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/layouts.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/layouts.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/layouts.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ headings; font boxes. Facilities are provided for a document
 designer to experiment with the layout parameters.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -47,24 +41,11 @@ designer to experiment with the layout parameters.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.6d-2
-+ Revision: 753207
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.6d-1
-+ Revision: 718834
-- texlive-layouts
-- texlive-layouts
-- texlive-layouts
-- texlive-layouts
-
