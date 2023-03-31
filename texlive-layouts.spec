@@ -1,6 +1,6 @@
 Name:		texlive-layouts
 Version:	42428
-Release:	1
+Release:	2
 Summary:	Display various elements of a document's layout
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/layouts
