@@ -3,7 +3,7 @@ Version:	42428
 Release:	2
 Summary:	Display various elements of a document's layout
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/layouts
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/layouts
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/layouts.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/layouts.doc.r%{version}.tar.xz
